@@ -11,16 +11,16 @@
 			<div class="collapse navbar-collapse" id="navbarScroll">
 				 <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+						<a class="nav-link active" aria-current="page" href="/">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="about.html">Sobre Nosotros</a>
+						<a class="nav-link" href="/quienessomos">Sobre Nosotros</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="services.html">Servicios</a>
+						<a class="nav-link" href="/servicios">Servicios</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contacto</a>
+						<a class="nav-link" href="/contacto">Contacto</a>
 					</li>
 				</ul> 
 				<!--/search-right-->

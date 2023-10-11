@@ -19,7 +19,7 @@ class Productos extends Component{
     protected $queryString = ['search' => ['except' => '']];
     protected $paginationTheme = 'bootstrap';
     public $search='';
-    public $nombre,$producto_id,$descripcion,$slug,$codigo,$precio2,$precio3,$iva=10,
+    public $nombre,$producto_id,$description,$slug,$codigo,$precio2,$precio3,$iva=10,
         $precio,$stock,$oferta,$foto,$fotoupdate,$categorias_id;
     public $collapsed="collapsed-card",$collapsedicon="fa-plus";
     public $updateMode = false,$fila="id",$orden="desc";
@@ -45,7 +45,7 @@ class Productos extends Component{
     private function resetInputFields(){
         $this->nombre = '';
         $this->producto_id = '';
-        $this->descripcion = '';
+        $this->description = '';
         $this->emit('descripcion','');
         $this->slug = '';
         $this->codigo = '';
@@ -99,7 +99,7 @@ class Productos extends Component{
 
     $producto = new Producto;
     $producto->nombre = $this->nombre;
-    $producto->descripcion = $this->descripcion;
+    $producto->description = $this->description;
     $producto->slug = $this->slug;
     $producto->codigo = $this->codigo;
     $producto->precio = intval(str_replace(".", "", $this->precio));

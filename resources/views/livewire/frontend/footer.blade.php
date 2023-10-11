@@ -17,14 +17,13 @@
 			<div class="row footer-p mt-5 pt-lg-4">
 				<div class="col-lg-4 col-md-6 pe-lg-5">
 					<div class="column">
-						<h3>Phone</h3>
-						<p><a href="tel:+(21) 255 088 4943">+(21) 255 088 4943</a></p>
+						<h3>Contacto:  {{ $empresa->telefono1 }}</h3>
+						{{-- <p><a href="tel:+(21) 255 088 4943">+(21) 255 088 4943</a></p> --}}
 					</div>
 
 					<div class="column mt-lg-5 mt-4">
-						<h3>Address </h3>
-						<p>FinAenc, Honey Street,Main Road
-							London, UK - 62617.</p>
+						<h3>Direccion </h3>
+						<p>. {{ $empresa->direccion }}</p>
 					</div>
 
 				</div>
@@ -37,18 +36,13 @@
 					<div class="column mt-lg-5 mt-4">
 						<h3>Follow</h3>
 						<ul class="social">
-							<li><a href="#facebook"><i class="fab fa-facebook-f"></i></a>
-							</li>
-							<li><a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
-							</li>
-							<li><a href="#twitter"><i class="fab fa-twitter"></i></a>
-							</li>
-							<li><a href="#google"><i class="fab fa-google-plus-g"></i></a>
-							</li>
-
+							<li><a href="{{ $empresa->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="{{ $empresa->facebook }}"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="{{ $empresa->twitter}}"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="{{ $empresa->instagram}}"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="{{ $empresa->twitter}}"><i class="fab fa-google-plus-g"></i></a></li>
 						</ul>
 					</div>
-
 				</div>
 				<div class="col-lg-4 col-md-6 mt-lg-0 mt-4 pl-xl-0">
 					<h3>Newsletter</h3>
@@ -65,7 +59,7 @@
 			<div class="below-section pt-lg-4 mt-5">
 				<div class="row">
 
-					<p class="copy-text col-lg-7">&copy; 2022 FinAgenc. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank"> W3Layouts</a>
+					<p class="copy-text col-lg-7">&copy; Desarrollado por . <a href="http://techcirclepy.com" target="_blank"> TechCircle</a>
 					</p>
 					<div class="col-lg-5 w3footer-gd-links d-flex">
 

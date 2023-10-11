@@ -32,6 +32,36 @@
 		<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
 		<script src="{{asset('frontend/js/jquery.easing.min.js')}}"></script>
+		<link rel="stylesheet" href="assets/css/style-starter.css">
+		  <!-- //for-mobile-apps -->
+		  <link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+		  <!-- pignose css -->
+		  <link href="{{asset('frontend/css/pignose.layerslider.css')}}" rel="stylesheet" type="text/css" media="all" />
+		  <!-- //pignose css -->
+		  <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
+		  <!-- js -->
+		  <script type="text/javascript" src="{{asset('frontend/js/jquery-2.1.4.min.js')}}"></script>
+		  <!-- //js -->
+		  <!-- cart -->
+			  <script src="{{asset('frontend/js/simpleCart.min.js')}}"></script>
+		  <!-- cart -->
+		  <!-- for bootstrap working -->
+			  <script type="text/javascript" src="{{asset('frontend/js/bootstrap-3.1.1.min.js')}}"></script>
+			  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+		  <!-- //for bootstrap working -->
+		  <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		  <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
+		  <script src="{{asset('frontend/js/jquery.easing.min.js')}}"></script>
+		  @livewireStyles
+	  <!-- Required meta tags -->
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <title>Movitech</title>
+	  <!--/google-fonts -->
+	  <link href="//fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+	  <!--//google-fonts -->
+	  <!-- Template CSS -->
+	  <link rel="stylesheet" href="assets/css/style-starter.css">
 		@livewireStyles
 
 		<!-- Meta Pixel Code -->
@@ -54,7 +84,7 @@
 	</head>
 	<body>
 
-		<livewire:info></livewire:info>
+		{{-- <livewire:info></livewire:info> --}}
 		
 		<livewire:navbar></livewire:navbar>
 	

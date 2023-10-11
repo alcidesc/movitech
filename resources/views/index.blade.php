@@ -44,12 +44,12 @@ Author URL: http://w3layouts.com
     <!--//Banner-slider-->
 	<div>
 		<section class="w3l-main-slider banner-slider position-relative" id="home">
-			{{-- <livewire:pricing> --}}
+			<livewire:pricing> 
 		</section>
 		<!-- //main-slider -->
 	</div>
     <!--/w3-grids-->
-    <section class="w3l-passion-mid-sec py-5">
+    {{-- <section class="w3l-passion-mid-sec py-5">
         <div class="container py-md-5 py-3">
             <div class="row w3l-passion-mid-grids">
                 <div class="col-lg-5 passion-grid-item-info mb-lg-0 mb-5 pe-lg-3">
@@ -71,10 +71,10 @@ Author URL: http://w3layouts.com
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--//w3-grids-->
     <!-- features-section -->
-    <section class="w3l-features py-5" id="features">
+    {{-- <section class="w3l-features py-5" id="features">
         <div class="container py-lg-5">
             <div class="row pb-lg-5 mb-lg-5 pt-lg-3">
                 <div class="col-lg-5 text-left">
@@ -86,10 +86,10 @@ Author URL: http://w3layouts.com
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--//features-section -->
     <!--/w3l-features-grids-->
-    <section class="w3l-features-grids">
+    {{-- <section class="w3l-features-grids">
         <div class="container">
             <div class="main-cont-wthree-2">
                 <div class="row justify-content-center">
@@ -125,7 +125,7 @@ Author URL: http://w3layouts.com
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--//w3l-features-grids-->
 
     <!--/w3-grids-->
@@ -197,7 +197,7 @@ Author URL: http://w3layouts.com
     <!--//w3-grids-->
 
     <!--/testimonials-->
-    <section class="w3l-clients w3l-bg-grey py-5" id="testimonials">
+    {{-- <section class="w3l-clients w3l-bg-grey py-5" id="testimonials">
         <div class="container py-md-5">
             <div class="row w3-testimonial-grids align-items-center py-lg-5">
                 <div class="col-12 w3-testimonial-content-top">
@@ -230,7 +230,7 @@ Author URL: http://w3layouts.com
 
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- //testimonials -->
     <!--/video-->
     {{-- <section class="w3l-index5 py-5" id="video">

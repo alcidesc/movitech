@@ -154,3 +154,9 @@ Route::get('/verproductos', function () {
 });
 
 Route::resource('/admin/servicios', App\Http\Controllers\ServicioController::class)->middleware('auth');
+Route::get('/verservicios', function () {
+    return view('frontend.verservicios');
+});
+Route::get('/servicios', function () {
+    return view('frontend.servicios');
+});

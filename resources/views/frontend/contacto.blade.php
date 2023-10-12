@@ -9,10 +9,10 @@
 		<div class="container" style="margin-top: -50px;">
 			<div class="row">
 				<div class="col-md-12"><br><br><br>
-					<h1 style="color:#eb646b; text-align: center;" class="tittle">Contacto</h1>
+					<h1 style="color:#0c2eec; text-align: center;" class="tittle">Contacto</h1>
 				</div>
 				<div class="col-md-6">
-					<h1 class="tittle" style="color:#eb646b;">Formulario de contacto</h1>
+					<h1 class="tittle" style="color:#2011eb;">Formulario de contacto</h1>
 					<form action="{{ route('enviarcorreo') }}" method="post">
 						@csrf
 						<div class="contact-form2">
@@ -24,7 +24,7 @@
 					</form>
 				</div>
 				<div class="col-md-6">
-					<h3 class="tittle" style="color:#eb646b;">Ver en el mapa</h3>
+					<h3 class="tittle" style="color:#1434eb;">Ver en el mapa</h3>
 					<!-- map -->
 					<div class="row">
 						<div class="col-12"><hr>

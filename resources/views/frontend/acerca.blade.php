@@ -1,7 +1,5 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+@extends('layouts.frontend')
+@section('contenido')
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +7,7 @@ Author URL: http://w3layouts.com
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>FinAgenc - Corporate Category Bootstrap Responsive Template | About :: W3layouts</title>
+    <title></title>
     <!--/google-fonts -->
     <link href="//fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <!--//google-fonts -->
@@ -18,7 +16,7 @@ Author URL: http://w3layouts.com
     <link rel="stylesheet" href="assets/css/style-starter.css">
 </head>
 <!--/Header-->
-<livewire:navbar>
+{{-- <livewire:navbar> --}}
 <body>
     <!--//Header-->
     <!-- breadcrumb -->
@@ -27,19 +25,20 @@ Author URL: http://w3layouts.com
             <div class="container py-5">
                 <div class="w3breadcrumb-gids text-center py-sm-5 py-4">
                     <div class="w3breadcrumb-info">
-                        <h2 class="w3ltop-title">About Us</h2>
+                        <h2 class="w3ltop-title">Sobre Nosotros</h2>
                     </div>
                     <ul class="breadcrumbs-custom-path">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active"><span class="fas fa-arrow-right mx-2"></span> About </li>
+                        <li><a href="/">Inicio</a></li>
+                        <li class="active"><span class="fas fa-arrow-right mx-2"></span> Sobre Nosotros </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+    
     <!--//breadcrumb-->
     <!--/about-page-->
-    <section class="w3l-ab-page py-5" id="about1">
+    {{-- <section class="w3l-ab-page py-5" id="about1">
         <div class="container py-lg-5 py-md-4 py-2 ">
 
             <div class="title-content text-left">
@@ -83,7 +82,7 @@ Author URL: http://w3layouts.com
             </div>
 
         </div>
-    </section>
+    </section> --}}
     <!--//about-pages-->
 
     <!--/w3-grids-->
@@ -91,9 +90,8 @@ Author URL: http://w3layouts.com
         <div class="container py-md-5 py-3">
             <div class="row w3l-passion-mid-grids">
                 <div class="col-lg-6 passion-grid-item-info pe-lg-5 mb-lg-0 mb-5">
-                    <h6 class="title-subhny">Revealing what is Possible</h6>
-                    <h3 class="title-w3l mb-4">Fresh Ideas, Refreshing Communication</h3>
-                    <p class="mt-3 pe-lg-5">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.Lorem ipsum dolor sit, amet consectetur elit. Earum mollitia cum ex ipsam autem!earum sequi amet.</p>
+                    <h3 class="title-w3l mb-4"></h3>
+                    <p><livewire:acerca></p>
                 </div>
                 <div class="col-lg-6 passion-grid-item-info">
                     <div class="row">
@@ -107,10 +105,10 @@ Author URL: http://w3layouts.com
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <!--//w3-grids-->
     <!--/w3l-join-main-->
-    <section class="w3l-join-main py-5">
+    {{-- <section class="w3l-join-main py-5">
         <div class="container py-md-5 py-4">
             <div class="w3l-project-in">
                 <div class="bottom-info">
@@ -128,11 +126,11 @@ Author URL: http://w3layouts.com
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--//w3l-join-main-->
 	
     <!--/team-sec-->
-    <section class="w3l-team-main team py-5" id="team">
+    {{-- <section class="w3l-team-main team py-5" id="team">
         <div class="container py-lg-5">
             <div class="text-center mb-2">
                 <h6 class="title-subhny">Our Team</h6>
@@ -211,11 +209,11 @@ Author URL: http://w3layouts.com
             </div>
 
         </div>
-    </section>
+    </section> --}}
     <!--//team-sec-->
 	
     <!--/footer-->
-    <livewire:footer/>
+    {{-- <livewire:footer/> --}}
     <!-- //footer -->
     <!--/Js-scripts-->
     <!-- move top -->

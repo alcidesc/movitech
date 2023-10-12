@@ -867,12 +867,12 @@ position:relative;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  background: #FDA30E;
+  background: #9cd8eb;
 }
 .hvr-outline-out2:before {
   content: '';
   position: absolute;
-  border: #FDA30E solid 4px;
+  border: #0c2224 solid 4px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1794,7 +1794,7 @@ h3.tittle {
     outline: none;
     padding: 10px 0;
     border: none;
-    background: #FDA30E;
+    background: #0a0a0a;
     font-size: 1em;
     color: #fff;
     width: 16%;

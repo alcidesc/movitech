@@ -20,7 +20,7 @@
 <body>
     <!--//Header-->
     <!-- breadcrumb -->
-    <section class="w3l-about-breadcrumb">
+    {{-- <section class="w3l-about-breadcrumb">
         <div class="breadcrumb-bg breadcrumb-bg-about">
             <div class="container py-5">
                 <div class="w3breadcrumb-gids text-center py-sm-5 py-4">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     
     <!--//breadcrumb-->
     <!--/about-page-->

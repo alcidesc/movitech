@@ -174,7 +174,7 @@ Author URL: http://w3layouts.com
                 </div>
                 <!--//row-2-->
                 <!--/row-3-->
-                <div class="row w3l-passion-mid-grids mt-lg-5 mt-4">
+                {{-- <div class="row w3l-passion-mid-grids mt-lg-5 mt-4">
                     <div class="col-lg-6 w3grids-left-img p-0">
                         <img src="assets/images/g3.jpg" alt="" class="img-fluid">
                     </div>
@@ -189,7 +189,7 @@ Author URL: http://w3layouts.com
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!--//row-3-->
             </div>
         </div>
@@ -265,7 +265,7 @@ Author URL: http://w3layouts.com
     </section> --}}
     <!--//video-->
     <!--/w3llets-work-->
-    <section class="w3llets-work py-5">
+    {{-- <section class="w3llets-work py-5">
         <div class="container py-md-5">
             <div class="row justify-content-center">
                 <div class="w3llets-work-left col-lg-7">
@@ -282,7 +282,7 @@ Author URL: http://w3layouts.com
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--//w3llets-work-->
     <!--/footer-->
     

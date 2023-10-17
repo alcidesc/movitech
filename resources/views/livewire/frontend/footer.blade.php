@@ -31,7 +31,7 @@
 
 					<div class="column">
 						<h3>Support</h3>
-						<p><a href="mailto:finagenc@mail.com" class="mail">finagenc@mail.com</a></p>
+						<p><a href="mailto:finagenc@mail.com" class="mail">{{$empresa->correo}}</a></p>
 					</div>
 					<div class="column mt-lg-5 mt-4">
 						<h3>Follow</h3>

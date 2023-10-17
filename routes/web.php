@@ -157,6 +157,10 @@ Route::resource('/admin/servicios', App\Http\Controllers\ServicioController::cla
 Route::get('/verservicios', function () {
     return view('frontend.verservicios');
 });
-Route::get('/servicios', function () {
-    return view('frontend.servicios');
+
+Route::get('/services', function () {
+    return view('frontend.services');
+});
+Route::get('/admin/services', function () {
+    return view('admin.servicios.index');
 });

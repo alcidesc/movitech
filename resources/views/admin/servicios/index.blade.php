@@ -3,15 +3,21 @@
 @section('title', 'Servicios')
 
 @section('content_header')
-    <h1>Servicios <a href="servicios/create"><button class="btn btn-success"><i class="fas fa-plus-circle"></i> Crear Servicio</button></a></h1><hr>
+    <h1>Servicios</h1>
 @stop
 
 @section('content')
 
-    <livewire:servicios />
+
+<livewire:services />
 
 @stop
 
 @section('js')
+    <script>
+    	window.livewire.on('alert', param => {
+	        toastr[param['type']](param['message']);
+	    });
+    </script>
     <script> console.log('Hi!'); </script>
 @stop

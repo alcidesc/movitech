@@ -23,9 +23,9 @@
                             @if($fotoupdate) 
                                 <img src="{{ $fotoupdate->temporaryUrl() }}" width="200px;">
                             @else
-                                <img src="{{ asset('/images/productos/'.$foto) }}" width="200px;">
+                                <img src="{{ asset('/images/servicios/'.$foto) }}" width="200px;">
                             @endif
-                            <input type="file" class="form-control" wire:model="fotoupdate" accept="image/jpeg, image/png, image/bmp">
+                            <input type="file" class="form-control" wire:model="foto" accept="image/jpeg, image/png, image/bmp">
                         @else
                             @if($foto) 
                                 <img src="{{ $foto->temporaryUrl() }}" width="200px;">

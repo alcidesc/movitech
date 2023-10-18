@@ -271,6 +271,15 @@ return [
             'icon' => 'fas fa-boxes',
         ],
         [
+            'header' => 'SERVICIOS',
+        ],
+        [
+            'text' => 'Servicios',
+            'url'  => 'admin/services',
+            'icon' => 'fas fa-boxes',
+        ],
+
+        [
             'header' => 'PROVEEDORES',
         ],
         [

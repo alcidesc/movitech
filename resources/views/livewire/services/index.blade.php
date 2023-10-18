@@ -29,7 +29,7 @@
                                 <td>{{ $pro->codigo }}</td>
                                 <td>
                                     @if($pro->foto)
-                                        <img src="{{ asset('/images/productos/'.$pro->foto) }}" style="width:40px;border-radius:50px;">
+                                        <img src="{{ asset('/images/servicios/'.$pro->foto) }}" style="width:40px;border-radius:50px;">
                                     @endif
                                     {{ $pro->nombre }}
                                 </td>
@@ -44,10 +44,10 @@
                                     @if($pro->precio3)
                                         <p><b>Precio 3: </b>{{number_format($pro->precio3, 0, '', '.') }}</p>
                                     @endif
-                                </td>
+                                 </td>
                                 <td>{{ $pro->stock }}</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" wire:click="$set('producto_id', {{ $pro->id }})" data-target="#viewModal{{ $pro->id }}"><i class="far fa-eye"></i></button>
+                                <td> 
+                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" wire:click="$set('services_id', {{ $pro->id }})" data-target="#viewModal{{ $pro->id }}"><i class="far fa-eye"></i></button>
                                     <!-- Modal view-->
                                     @include('livewire.services.modal.modalwievservices')
                                     <button wire:click="edit({{ $pro->id }})" class="btn btn-sm btn-info"><i class="far fa-edit"></i></button>
@@ -160,10 +160,9 @@
                 Livewire.on('oferta', oferta => {
                     $('#oferta').val(oferta);
                 });
-                Livewire.on('stock', stock => {
+                 Livewire.on('stock', stock => {
                     $('#stock').val(stock);
                 });
-                
             </script>
         @stop
     </div>

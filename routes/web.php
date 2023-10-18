@@ -164,3 +164,6 @@ Route::get('/services', function () {
 Route::get('/admin/services', function () {
     return view('admin.servicios.index');
 });
+Route::get('/viewservices', function () {
+    return view('frontend.services');
+});

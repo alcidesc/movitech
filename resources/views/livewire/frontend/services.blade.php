@@ -17,13 +17,13 @@
 	            object-position: center center;
 	        }
 	    }
-	</style>
+	</style><br><br><br>
 	<div class="practice-areas">
 		<div class="container">
 			<div class="wthree_head_section">
 				<h3 class="w3l_header">Nuestros <span>Servicios</span></h3>
-				<p>Se destacan en el mercado por ser realizados por profesionales cualificados. Estilos vanguardistas y elegantes lo encontrarás aquí.
-				¿Quieres hacerte uno de nuestros tratamientos? ¡No esperes ni un minuto! Reserva tu cita ya</p>
+				<p>En motitech tenemos los profesionales Calificados para la reparacion de Celulares al mejor precio del mercado.
+				¿Calidad y mejor precio? ¡No esperes ni un minuto! Solicita un presupuesto</p>
 			</div>
 			<div class="row">
 				@if ($limite == 2)
@@ -34,7 +34,7 @@
 				@php
 					$cont=1;
 				@endphp
-				@foreach ($servicios as $value)
+				@foreach ($services as $value)
 					@if ($cont > 2)
 						<div class="col-md-6">
 							<div class="row">
@@ -42,7 +42,7 @@
 									<a href="/view/{{$value->id}}"><h3 align="center">{{$value->nombre }}</h3></a><hr>
 									<p class="para-w3-agile">
 										<?php
-											$texto = preg_replace ('/<[^>]*>/', ' ', $value->description);
+											$texto = preg_replace ('/<[^>]*>/', ' ', $value->descripcion);
 											echo substr($texto, 0, 150); 
 										?> ...
 									</p>
@@ -69,7 +69,7 @@
 									<a href="/view/{{$value->id}}"><h3 align="center">{{$value->nombre }}</h3></a><hr>
 									<p class="para-w3-agile">
 										<?php
-											$texto = preg_replace ('/<[^>]*>/', ' ', $value->description);
+											$texto = preg_replace ('/<[^>]*>/', ' ', $value->descripcion);
 											echo substr($texto, 0, 150); 
 										?> ...
 									</p>
@@ -99,10 +99,10 @@
 							<a href="{{ url('/servicios')}}">Ver más servicios</a>
 						</div>
 					@else
-						{{ $servicios->links() }}
+						{{ $services->links() }}
 					@endif
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><br><br><br>
 </div>

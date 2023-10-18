@@ -11,7 +11,7 @@
                 <div class="row">
                     @if($pro->foto)
                         <div class="col-md-12" align="center">
-                            <img src="{{ asset('/images/productos/'.$pro->foto) }}" style="width:200px;border-radius:20px;">
+                            <img src="{{ asset('/images/servicios/'.$pro->foto) }}" style="width:200px;border-radius:20px;">
                         </div>
                     @endif
                     <div class="col-md-4">

@@ -167,3 +167,9 @@ Route::get('/admin/services', function () {
 Route::get('/viewservices', function () {
     return view('frontend.services');
 });
+Route::get('/admin/noticia', function () {
+    return view('admin.noticia.index');
+});
+Route::get('/viewnoticias', function () {
+    return view('frontend.noticias');
+});

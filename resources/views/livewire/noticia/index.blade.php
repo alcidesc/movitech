@@ -2,58 +2,47 @@
     <div>
         <div class="row">
             <div class="col-md-12">
-                @include('livewire.services.create')
+                @include('livewire.noticia.create')
             </div>
             <div class="col-md-12">
-                <input wire:model="search" class="form-control" type="search" placeholder="Buscar por código o nombre ">
+                <input wire:model="search" class="form-control" type="search" placeholder="Buscar   ">
             </div>
             <div class="col-md-12" align="right">
                 <small>Filtro por {{$fila}} en orden @if($orden == "asc") ascendente @else descendente @endif</small>
             </div>
         </div>
         <div class="row table-responsive">
-            @if ($services->count())
+            @if ($noticias->count())
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th style="cursor:pointer" wire:click="ordenar('codigo')">Código</th>
-                            <th style="cursor:pointer" wire:click="ordenar('nombre')">Producto</th>
-                            <th style="cursor:pointer" wire:click="ordenar('precio')">Precio</th>
+                            <th style="cursor:pointer" wire:click="ordenar('id')">Código</th>
+                            <th style="cursor:pointer" wire:click="ordenar('nombre')">Noticia</th>
                             <th style="cursor:pointer" wire:click="ordenar('stock')"></th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($services as $pro)
+                        @foreach ($noticias as $pro)
                             <tr>
-                                <td>{{ $pro->codigo }}</td>
+                                <td>{{ $pro->id }}</td>
                                 <td>
                                     @if($pro->foto)
-                                        <img src="{{ asset('/images/servicios/'.$pro->foto) }}" style="width:40px;border-radius:50px;">
+                                        <img src="{{ asset('/images/noticias/'.$pro->foto) }}" style="width:40px;border-radius:50px;">
                                     @endif
                                     {{ $pro->nombre }}
                                 </td>
-                                <td>
-                                    <p><b>Precio: </b>{{number_format($pro->precio, 0, '', '.') }}</p>
-                                    @if($pro->oferta)
-                                        <p><b>Oferta: </b>{{number_format($pro->oferta, 0, '', '.') }}</p>
-                                    @endif
-                                    @if($pro->precio2)
-                                        <p><b>Precio 2: </b>{{number_format($pro->precio2, 0, '', '.') }}</p>
-                                    @endif
-                                    @if($pro->precio3)
-                                        <p><b>Precio 3: </b>{{number_format($pro->precio3, 0, '', '.') }}</p>
-                                    @endif
-                                 </td>
                                 <td>{{ $pro->stock }}</td>
                                 <td> 
-                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" wire:click="$set('services_id', {{ $pro->id }})" data-target="#viewModal{{ $pro->id }}"><i class="far fa-eye"></i></button>
+                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" wire:click="$set('noticias_id', {{ $pro->id }})" data-target="#viewModal{{ $pro->id }}"><i class="far fa-eye"></i></button>
                                     <!-- Modal view-->
-                                    @include('livewire.services.modal.modalwievservices')
+                                    @include('livewire.noticia.modal.modalwievnoticias')
+                                    
                                     <button wire:click="edit({{ $pro->id }})" class="btn btn-sm btn-info"><i class="far fa-edit"></i></button>
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal{{ $pro->id }}"><i class="far fa-trash-alt"></i></button>
                                     <!-- Modal  delete-->
-                                    @include('livewire.services.modal.modaldelete')
+
+                                    @include('livewire.noticia.modal.modaldelete')
                                 </td>
                             </tr>
                         @endforeach
@@ -65,7 +54,7 @@
                 </div>
             @endif
             <div class="col-md-12">
-                {{$services->links()}}
+                {{$noticias->links()}}
             </div>
         </div>
     
@@ -121,19 +110,6 @@
                     var data = $('#categorias_id').select2("val");
                     @this.set('categorias_id', data);
                 });
-                // Livewire.on('categorias_id', categorias_id => {
-                //     if(categorias_id){
-                //         const categorias = [];
-                //         categorias_id.map(getitems);
-                //         function getitems(item) {
-                //             categorias.push(item.categoria_id);
-                //         }
-                //         $('#categorias_id').val(categorias).trigger('change');
-                //     }else{
-                //         $('#categorias_id').val(null).trigger('change');
-                //     }
-                // });
-    
                 // Separador de miles
                 function formatNumber(n) {
                     n = String(n).replace(/\D/g, ""); // Eliminar caracteres no numéricos

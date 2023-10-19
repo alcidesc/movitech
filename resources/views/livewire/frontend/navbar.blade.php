@@ -14,7 +14,7 @@
 						<a class="nav-link active" aria-current="page" href="/">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/">Noticias</a>
+						<a class="nav-link active" aria-current="page" href="/viewnoticias">Noticias</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/quienessomos">Sobre Nosotros</a>

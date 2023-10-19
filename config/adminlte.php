@@ -276,7 +276,7 @@ return [
         [
             'text' => 'Servicios',
             'url'  => 'admin/services',
-            'icon' => 'fas fa-boxes',
+            'icon' => 'fas fa-concierge-bell',
         ],
 
         [

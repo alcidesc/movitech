@@ -78,9 +78,12 @@
 										@if (in_array("ser_id".$value->id, Cart::getContent()->pluck('id')->toArray()))
 											<a href="{{ url('/carritoservicio') }}"><button type="button" class="btn btn-success"><i class="fa fa-check-circle-o"></i> Completar cita</button></a>
 										@else
-											<button class="btn btn-warning" wire:click="addcita({{ $value->id }})"><i class="fa fa-shopping-cart"></i> Solicitar cita</button>
+										<a href="https://wa.me/{{ $empresa->whatsapp }}?text=Buenas!!%20estoy%20interesado%20en%20el%20Servicio" target="_blank" style="text-decoration: none;">
+											<button style="background-color: #25d366; color: #fff; border: none; padding: 10px 20px; cursor: pointer;">
+												<i class="fab fa-whatsapp"></i> Solicitar Servicio
+											</button>
+										</a>										
 										@endif	
-
 									</div>
 								</div>
 							</div>

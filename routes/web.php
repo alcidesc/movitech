@@ -107,7 +107,7 @@ Route::get('/product/{slug}', function ($slug) {
     SEOTools::opengraph()->addProperty('product:price:amount', $producto->precio);
     SEOTools::opengraph()->addProperty('product:price:currency', 'PYG');
     SEOTools::opengraph()->addProperty('product:retailer_item_id', $producto->slug);
-    OpenGraph::addImage('https://www.plantascaceres.com/images/productos/'.$producto->foto, ['height' => 300, 'width' => 300]);
+    //OpenGraph::addImage('https://www.plantascaceres.com/images/productos/'.$producto->foto, ['height' => 300, 'width' => 300]);
 
     return view('frontend.view',["slug"=>$slug]);
 });
@@ -172,4 +172,7 @@ Route::get('/admin/noticia', function () {
 });
 Route::get('/viewnoticias', function () {
     return view('frontend.noticias');
+});
+Route::get('/noticias/{slug}', function ($slug) {
+    return view('frontend.vernoticias',["slug"=>$slug]);
 });

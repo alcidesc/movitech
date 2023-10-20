@@ -44,7 +44,7 @@
                                          <img src="/images/noticias/{{ $value->foto }}" alt="" class="pro-image-back">
                                          <div class="men-cart-pro">
                                              <div class="inner-men-cart-pro">
-                                                 <a href="/noticias/{{ $value->slug }}" class="link-product-add-cart">Ver </a>
+                                                 <a href="/noticias/{{ $value->slug }}" class="link-product-add-cart">Ver detalle noticia </a>
                                              </div>
                                          </div>
                                          @if ($value->oferta)

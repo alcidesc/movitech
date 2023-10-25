@@ -1,6 +1,6 @@
 
-@extends('layouts.frontend')
-@section('contenido')
+ @extends('layouts.frontend') 
+ @section('contenido') 
 
 @livewire('vernoticias', ['slug' => $slug])
 

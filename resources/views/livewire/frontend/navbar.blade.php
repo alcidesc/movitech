@@ -1,7 +1,7 @@
 <header id="site-header" class="fixed-top">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
-			<h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+			<h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="/"><br>
 					M<span class="log">ovitech</span>
 				</a></h1>
 			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,28 +10,30 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarScroll">
 				 <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/">Inicio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/viewnoticias">Noticias</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/quienessomos">Sobre Nosotros</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/services">Servicios</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/contacto">Contacto</a>
-					</li>
+					<ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+						<li class="nav-item @if($_SERVER['REQUEST_URI'] === '/') active menu__item--current @endif">
+							<a class="nav-link" aria-current="page" href="/">Inicio</a>
+						</li>
+						<li class="nav-item @if($_SERVER['REQUEST_URI'] === '/viewnoticias') active menu__item--current @endif">
+							<a class="nav-link" href="/viewnoticias">Noticias</a>
+						</li>
+						<li class="nav-item @if($_SERVER['REQUEST_URI'] === '/quienessomos') active menu__item--current @endif">
+							<a class="nav-link" href="/quienessomos">Sobre Nosotros</a>
+						</li>
+						<li class="nav-item @if($_SERVER['REQUEST_URI'] === '/services') active menu__item--current @endif">
+							<a class="nav-link" href="/services">Servicios</a>
+						</li>
+						<li class="nav-item @if($_SERVER['REQUEST_URI'] === '/contacto') active menu__item--current @endif">
+							<a class="nav-link" href="/contacto">Contacto</a>
+						</li>
+					</ul>					
 				</ul> 
 				<!--/search-right-->
 				<ul class="header-search d-flex mx-lg-4">
-					<li class="nav-item search-right">
+					{{-- <li class="nav-item search-right">
 						<a href="#search" class="" title="search"> <span class="fas fa-search me-lg-4" aria-hidden="true"></span></a>
 						<!-- search popup -->
-						<div id="search" class="pop-overlay">
+						{{-- <div id="search" class="pop-overlay">
 							<div class="popup">
 								<h3 class="title-w3l two mb-4 text-left">Search Here</h3>
 								<form action="#" method="GET" class="search-box d-flex position-relative">
@@ -40,9 +42,9 @@
 								</form>
 							</div>
 							<a class="close" href="#close">×</a>
-						</div>
+						</div> 
 						<!-- /search popup -->
-					</li>
+					</li> --}}
 				
 					<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav menu__list">

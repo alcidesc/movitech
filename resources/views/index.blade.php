@@ -1,10 +1,6 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- //for-mobile-apps -->
 		<link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
@@ -34,12 +30,13 @@ Author URL: http://w3layouts.com
     <link href="//fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <!--//google-fonts -->
     <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="assets/css/style-starter.css"> 
 </head>
 <!--/Header-->
-<livewire:navbar>
+{{-- <livewire:navbar> --}}
 	
 <body>
+    <livewire:navbar><br>
     <!--//Header-->
     <!--//Banner-slider-->
 	<div>
@@ -129,7 +126,7 @@ Author URL: http://w3layouts.com
     <!--//w3l-features-grids-->
 
     <!--/w3-grids-->
-    <section class="w3l-passion-mid-sec py-5">
+    {{-- <section class="w3l-passion-mid-sec py-5">
         <div class="container py-md-5 py-3">
             <div class="heading text-center mx-auto">
                 <h6 class="title-subhny">Our Works</h6>
@@ -191,10 +188,9 @@ Author URL: http://w3layouts.com
                     </div>
                 </div> --}}
                 <!--//row-3-->
-            </div>
+            {{-- </div>
         </div>
-    </section>
-    <!--//w3-grids-->
+    </section> --}} 
 
     <!--/testimonials-->
     {{-- <section class="w3l-clients w3l-bg-grey py-5" id="testimonials">

@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" align="center">
-                        <h1 style="color:#eb646b;">
+                        <h1 style="color:#eb646b;"><br><br>
                             @if($producto->tipo == 1)
                                 Producto
                             @else
@@ -34,9 +34,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         @if($producto->tipo == 1)
-                            <img src="/images/productos/{{$producto->foto}}" width="100%" style="border-radius: 50px;">
+                            <img src="/images/productos/{{$producto->foto}}" width="70%" style="border-radius: 20px;">
                         @else
-                            <img src="/images/servicios/{{$producto->foto}}" width="100%" style="border-radius: 50px;">
+                            <img src="/images/servicios/{{$producto->foto}}" width="70%" style="border-radius: 20px;">
                         @endif
                     </div>
                     <div class="col-md-6">
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     @endforeach
-                </div>
+                </div> 
             </div>
         </div>
 	</div>

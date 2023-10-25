@@ -90,7 +90,7 @@ Route::get('/', function () {
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
     SEO::setTitle('► '.$empresa->nombre);
     SEO::setDescription(substr($texto, 0, 300));
-    OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('index');
 });
@@ -99,8 +99,8 @@ Route::get('/product/{slug}', function ($slug) {
     $texto = preg_replace ('/<[^>]*>/', ' ', $producto->descripcion);
     SEO::setTitle('► '.$producto->nombre);
     SEO::setDescription(substr($texto, 0, 300));
-    SEOMeta::setCanonical('https://www.plantascaceres.com/product/'.$producto->slug);
-    SEOTools::opengraph()->addProperty('product:brand', 'Plantas Caceres');
+    //SEOMeta::setCanonical('https://www.plantascaceres.com/product/'.$producto->slug);
+    SEOTools::opengraph()->addProperty('product:brand', 'Movitech');
     SEOTools::opengraph()->addProperty('product:condition', 'new');
     SEOTools::opengraph()->addProperty('product:availability', 'in stock');
     SEOTools::opengraph()->addProperty('product:item_group_id', $producto->id);
@@ -114,9 +114,9 @@ Route::get('/product/{slug}', function ($slug) {
 Route::get('/quienessomos', function () {
     $empresa=Empresa::first();
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
-    SEO::setTitle('► Quienes Somos');
-    SEO::setDescription(substr($texto, 0, 300));
-    OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+    //SEO::setTitle('► Quienes Somos');
+    //SEO::setDescription(substr($texto, 0, 300));
+   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('frontend.acerca');
 });
@@ -129,7 +129,7 @@ Route::get('/productos', function () {
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
     SEO::setTitle('► Productos');
     SEO::setDescription(substr($texto, 0, 300));
-    OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('frontend.productos');
 });
@@ -148,7 +148,7 @@ Route::get('/verproductos', function () {
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
     SEO::setTitle('► Productos');
     SEO::setDescription(substr($texto, 0, 300));
-    OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('frontend.verproductos');
 });

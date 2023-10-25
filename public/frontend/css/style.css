@@ -323,7 +323,7 @@ label{
 .menu--shylock .menu__link {
 	position: relative;
     margin: 0;
-	color: #b5b5b5;
+	color: #f0e9e9;
 	-webkit-transition: color 0.4s;
 	transition: color 0.4s;
 }
@@ -347,7 +347,7 @@ label{
 
 .menu--shylock .menu__link:hover,
 .menu--shylock .menu__link:focus {
-	color: #0000FF; 
+	color: #f5eeee; 
 }
 
 .menu--shylock .menu__link:hover::before,
@@ -376,20 +376,22 @@ label{
 }
 
 .menu--shylock .menu__link::before {
-	background: #f8f7f7;
+	background: #eee8e8;
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
 
 .menu--shylock .menu__link::after {
-	background: #ebe5dd;
+	background: #f8f2f2;
 }
 a.menu__link {
-    color: #ecf0ec !important;
+    color: #412df3 !important;
     font-size: 15px;
     font-weight: normal;
     text-transform: uppercase;
+    transition: color 0.3s; /* Agrega una transición suave para la animación del color */
 }
+
 /*-- //left nav --*/
 .top_nav_right {
     float: right;

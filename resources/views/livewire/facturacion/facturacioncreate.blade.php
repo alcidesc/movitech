@@ -76,7 +76,7 @@
                     <select class="custom-select" id="inputGroupSelect01" wire:model="tipocomprobantes" required>
                         <option value="">Seleccione el Comprobante</option>
                         <option value="Recibo">Recibo</option>
-                        <option value="Factura">Factura</option>
+                        {{-- <option value="Factura">Factura</option> --}}
                     </select>
                     @error('tipocomprobantes')
                     <span class="invalid-feedback" role="alert">

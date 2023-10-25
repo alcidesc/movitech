@@ -5,7 +5,7 @@
 				<h3 class="w3l_header">Tus <span>Servicios</span></h3>
 			</div>
 			<div class="ab-agile">
-				<div class="col-md-12 aboutleft" align="center">
+				<div class="col-md-12 aboutleft" text-align="center">
 					<h3 style="color: #525252;">Estas son tus citas solicitadas {{ Auth::user()->name }} </h3>
 					<p class="para1"></p>
 				</div>	
@@ -89,5 +89,6 @@
 			</div>
 		</div>
 	</div>
+	
 </div> 
 

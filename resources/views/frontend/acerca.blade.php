@@ -96,10 +96,10 @@
                 <div class="col-lg-6 passion-grid-item-info">
                     <div class="row">
                         <div class="col-6 passion-grid-item-info">
-                            <img src="assets/images/g1.jpg" alt="" class="img-fluid radius-image">
+                            <img src="assets/images/g1.jpg" alt="" class="img-fluid radius-image"style="height: 300px;">
                         </div>
                         <div class="col-6 passion-grid-item-info">
-                            <img src="assets/images/g2.jpg" alt="" class="img-fluid radius-image">
+                            <img src="assets/images/g2.jpg" alt="" class="img-fluid radius-image"style="height: 300px;">
                         </div>
                     </div>
                 </div>

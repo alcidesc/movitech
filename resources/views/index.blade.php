@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <!-- //for-mobile-apps -->
 		<link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
@@ -32,61 +32,38 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css"> 
 </head>
-<!--/Header-->
-{{-- <livewire:navbar> --}}
-	
-<body>
+<body id="top-gap-fixed-header" class="home page-template page-template-page-templates page-template-template-homepage page-template-page-templatestemplate-homepage-php page page-id-7 noscroll">
     <livewire:navbar><br>
-    <!--//Header-->
-    <!--//Banner-slider-->
 	<div>
 		<section class="w3l-main-slider banner-slider position-relative" id="home">
 			<livewire:pricing> 
 		</section>
 		<!-- //main-slider -->
 	</div>
-    <!--/w3-grids-->
-    {{-- <section class="w3l-passion-mid-sec py-5">
-        <div class="container py-md-5 py-3">
-            <div class="row w3l-passion-mid-grids">
-                <div class="col-lg-5 passion-grid-item-info mb-lg-0 mb-5 pe-lg-3">
-                    <h6 class="title-subhny">About Us</h6>
-                    <h3 class="title-w3l mb-4">FinAgenc Build Branded Design</h3>
-                    <p class="mt-2 pe-lg-5">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.Lorem ipsum dolor sit, amet consectetur elit.</p>
-                    <p class="mt-3 pe-lg-5">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.Lorem ipsum dolor sit, amet consectetur elit.</p>
-
-                </div>
-                <div class="col-lg-7 passion-grid-item-info ps-lg-5">
-                    <h6 class="title-subhny">History</h6>
-                    <h3 class="title-w3l mb-4">Providing brilliant ideas for your business</h3>
-                    <p class="mt-2 pe-lg-5">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
-                    <p class="mt-3 pe-lg-5">We have been creating award-winning brands, websites, digital products, mobile apps and custom software since 2008.</p>
-                    <div class="w3banner-content-btns">
-                        <a href="about.html" class="btn btn-style btn-primary mt-lg-5 mt-4">Read More </a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!--//w3-grids-->
+    
     <!-- features-section -->
-    {{-- <section class="w3l-features py-5" id="features">
+    <section class="w3l-features py-5" id="features">
         <div class="container py-lg-5">
             <div class="row pb-lg-5 mb-lg-5 pt-lg-3">
                 <div class="col-lg-5 text-left">
-                    <h6 class="title-subhny two">What We Offer</h6>
-                    <h3 class="title-w3l two">Building Brands More Quickly</h3>
+                    <h6 class="title-subhny two">LO QUE OFRECEMOS</h6>
+                    <h3 class="title-w3l two">Respaldo Tecnológico Garantizado</h3>
                 </div>
                 <div class="col-lg-7 text-left ps-lg-5">
-                    <p class="w3p-white">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.Lorem ipsum dolor sit, amet consectetur elit.Lorem ipsum dolor sit amet.</p>
+                    <p class="w3p-white">
+                        Somos tu destino confiable para servicios de reparación de teléfonos, ventas y asistencia técnica. 
+                        Somos reconocidos como líderes del mercado, destacando por nuestra experiencia y profesionalismo. 
+                        En MOVITECH, nos enorgullece ofrecer soluciones tecnológicas excepcionales, respaldadas por un equipo 
+                        altamente capacitado y dedicado. Confía en nosotros para mantener tus dispositivos en perfecto estado, 
+                        proporcionando servicios rápidos y eficientes.
+                    </p>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section> 
     <!--//features-section -->
     <!--/w3l-features-grids-->
-    {{-- <section class="w3l-features-grids">
+    <section class="w3l-features-grids">
         <div class="container">
             <div class="main-cont-wthree-2">
                 <div class="row justify-content-center">
@@ -122,146 +99,11 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!--//w3l-features-grids-->
 
-    <!--/w3-grids-->
-    {{-- <section class="w3l-passion-mid-sec py-5">
-        <div class="container py-md-5 py-3">
-            <div class="heading text-center mx-auto">
-                <h6 class="title-subhny">Our Works</h6>
-                <h3 class="title-w3l mb-3">What We Do</h3>
-            </div>
-            <!--/row-1-->
-            <div class="w3l-passion-mid-grids w3recent-works mt-5">
-                <!--/row-1-->
-                <div class="row w3l-passion-mid-grids">
-                    <div class="col-lg-6 w3grids-left-img p-0">
-                        <img src="assets/images/g1.jpg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6 passion-grid-item-info p-0">
-                        <div class="w3grids-right-info">
-                            <div class="icon-text">
-                                <h5>UI/UX Design</h5>
-                                <h4><a href="#recent" class="title-head">
-                                        The ideas that are not afraid to be different.</a></h4>
-                                <p class="text-para mt-2 mb-4">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula tempufddfel.</p>
-                                <a href="#" class="read-more-icon"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--//row-1-->
-                <!--/row-2-->
-                <div class="row partrow-2 w3l-passion-mid-grids mt-lg-5 mt-4">
-                    <div class="col-lg-6 passion-grid-item-info p-0">
-                        <div class="w3grids-right-info">
-                            <div class="icon-text">
-                                <h5>Web Development</h5>
-                                <h4><a href="#recent" class="title-head">
-                                        The ideas that are not afraid to be different.</a></h4>
-                                <p class="text-para mt-2 mb-4">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula tempufddfel.</p>
-                                <a href="#" class="read-more-icon"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 w3grids-left-img p-0">
-                        <img src="assets/images/g4.jpg" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <!--//row-2-->
-                <!--/row-3-->
-                {{-- <div class="row w3l-passion-mid-grids mt-lg-5 mt-4">
-                    <div class="col-lg-6 w3grids-left-img p-0">
-                        <img src="assets/images/g3.jpg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6 passion-grid-item-info p-0">
-                        <div class="w3grids-right-info">
-                            <div class="icon-text">
-                                <h5>Marketing</h5>
-                                <h4><a href="#recent" class="title-head">
-                                        The ideas that are not afraid to be different.</a></h4>
-                                <p class="text-para mt-2 mb-4">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula tempufddfel.</p>
-                                <a href="#" class="read-more-icon"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-                <!--//row-3-->
-            {{-- </div>
-        </div>
-    </section> --}} 
-
-    <!--/testimonials-->
-    {{-- <section class="w3l-clients w3l-bg-grey py-5" id="testimonials">
-        <div class="container py-md-5">
-            <div class="row w3-testimonial-grids align-items-center py-lg-5">
-                <div class="col-12 w3-testimonial-content-top">
-                    <div class="mb-4">
-                        <div class="item">
-                            <div class="testimonial-content">
-                                <div class="test-img"><img src="assets/images/team2.jpg" class="img-fluid" alt="client-img">
-                                </div>
-                                <div class="testimonial">
-                                    <blockquote>
-                                        <q><i class="fas fa-quote-left me-2"></i>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae
-                                            laudantium
-                                            voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora. voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.Lorem ipsum dolor amet consectetur adipisicing elit ultrices in ligula.</q>
-
-                                    </blockquote>
-                                    <div class="testi-des">
-
-                                        <div class="peopl align-self">
-                                            <h3>John wilson</h3>
-                                            <p class="indentity">City Name</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section> --}}
-    <!-- //testimonials -->
-    <!--/video-->
-    {{-- <section class="w3l-index5 py-5" id="video">
-        <div class="container py-md-5">
-            <div class="row bottom-ab-grids align-items-center">
-                <div class="w3l-video-left col-lg-6 mb-lg-0 mb-5">
-                    <!-- /home-page-video-popup-->
-                    <div class="position-relative mt-5">
-                        <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
-                            <span class="video-play-icon">
-                                <span class="fa fa-play"></span>
-                            </span>
-                        </a>
-                        <!-- dialog itself, mfp-hide class is required to make dialog hidden --
-                        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                            <iframe src="https://player.vimeo.com/video/124801644?h=d2296cb1dc" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-						 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-                    </div>
-                    <!-- //home-page-video-popup-->
-                </div>
-                <div class="w3ab-left-top col-lg-6 mt-lg-0 mt-5 ps-lg-5">
-                    <h6 class="title-subhny two">Revealing what is Possible</h6>
-                    <h3 class="title-w3l two mb-2">Fresh Ideas, Refreshing Communication</h3>
-                    <p class="my-3"> Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.Lorem ipsum dolor sit, amet consectetur ante ipsum elit. </p>
-                    <p class="my-3"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                        Nulla mollis dapibus nunc.</p>
-                    <a href="about.html" class="btn btn-style btn-primary mt-4">Read More </a>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!--//video-->
     <!--/w3llets-work-->
-    {{-- <section class="w3llets-work py-5">
+    <section class="w3llets-work py-5">
         <div class="container py-md-5">
             <div class="row justify-content-center">
                 <div class="w3llets-work-left col-lg-7">
@@ -278,7 +120,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!--//w3llets-work-->
     <!--/footer-->
     

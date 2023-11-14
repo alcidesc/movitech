@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\service;
+use App\Models\Service;
 use App\Models\Empresa;
 use Livewire\WithPagination;
 use Cart;
@@ -23,9 +23,9 @@ class Viewservices extends Component{
 
     public function render(){
     
-        $services = service::where('estado', 1)->where('nombre', 'LIKE', '%' . $this->search . '%')->orderBy('id', 'desc')->paginate(20);
+        $servicios = Service::where('estado', 1)->where('nombre', 'LIKE', '%' . $this->search . '%')->orderBy('id', 'desc')->paginate(20);
         $empresa=Empresa::findOrFail(1); 
-    return view('livewire.frontend.services', ["services" => $services,"empresa"=>$empresa]);
+    return view('livewire.frontend.services', ["servicios" => $servicios,"empresa"=>$empresa]);
 }
 
 public function addcarrito($id){

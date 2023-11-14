@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 @section('contenido')
 
-<livewire:verproductos />
+    <livewire:pricing />
 
 @stop

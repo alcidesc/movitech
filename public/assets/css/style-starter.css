@@ -18071,6 +18071,17 @@ p.white {
     font-family: 'DM Sans', sans-serif;
 }
 
+.btn-style2 {
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    transition: 0.3s ease-in;
+    border-radius: var(--border-radius);
+    text-transform: capitalize;
+    font-family: 'DM Sans', sans-serif;
+}
+
 .propertyw3-btnhny .btn {
     text-transform: none;
 }

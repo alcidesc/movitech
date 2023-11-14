@@ -1,122 +1,28 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		{!! SEOMeta::generate() !!}
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {!! SEOMeta::generate() !!}
 		{!! OpenGraph::generate() !!}
 		{!! Twitter::generate() !!}
 		{!! JsonLd::generate() !!}
-		
-		<!-- for-mobile-apps -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-				function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<!-- //for-mobile-apps -->
-		<link href="{{asset('/frontend/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-		<!-- pignose css -->
-		<link href="{{asset('/frontend/css/pignose.layerslider.css')}}" rel="stylesheet" type="text/css" media="all" />
-		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'> 
-
-		<!-- //pignose css -->
-		<link href="{{asset('/frontend/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
-		<!-- js -->
-		<script type="text/javascript" src="{{asset('frontend/js/jquery-2.1.4.min.js')}}"></script>
-		<!-- //js -->
-		<!-- cart -->
-			<script src="{{asset('/frontend/js/simpleCart.min.js')}}"></script>
-		<!-- cart -->
-		<!-- for bootstrap working -->
-			<script type="text/javascript" src="{{asset('frontend/js/bootstrap-3.1.1.min.js')}}"></script>
-		<!-- //for bootstrap working -->
-		<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
-		<script src="{{asset('/frontend/js/jquery.easing.min.js')}}"></script>
-		<link rel="stylesheet" href="/assets/css/style-starter.css">
-		  <!-- //for-mobile-apps -->
-		  <link href="{{asset('/frontend/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-		  <!-- pignose css -->
-		  <link href="{{asset('/frontend/css/pignose.layerslider.css')}}" rel="stylesheet" type="text/css" media="all" />
-		  <!-- //pignose css -->
-		  <link href="{{asset('/frontend/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
-		  <!-- js -->
-		  <script type="text/javascript" src="{{asset('/frontend/js/jquery-2.1.4.min.js')}}"></script>
-		  <!-- //js -->
-		  <!-- cart -->
-			  <script src="{{asset('/frontend/js/simpleCart.min.js')}}"></script>
-		  <!-- cart -->
-		  <!-- for bootstrap working -->
-			  <script type="text/javascript" src="{{asset('frontend/js/bootstrap-3.1.1.min.js')}}"></script>
-			  <link rel='/stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
-		  <!-- //for bootstrap working -->
-		  <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-		  <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
-		  <script src="{{asset('/frontend/js/jquery.easing.min.js')}}"></script>
-		  @livewireStyles
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Movitech</title>
-		<!--/google-fonts -->
-		<link href="//fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
-		<!--//google-fonts -->
-		<!-- Template CSS -->
-		<link rel="stylesheet" href="/assets/css/style-starter.css">
-		<!--/google-fonts -->
-		<link href="//fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
-		<!--//google-fonts -->
-		<!-- Template CSS -->
-		<link rel="stylesheet" href="/assets/css/style-starter.css">
-		@livewireStyles
-		<!-- Meta Pixel Code -->
-			{{-- <script>
-				!function(f,b,e,v,n,t,s)
-				{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-				n.queue=[];t=b.createElement(e);t.async=!0;
-				t.src=v;s=b.getElementsByTagName(e)[0];
-				s.parentNode.insertBefore(t,s)}(window, document,'script',
-				'https://connect.facebook.net/en_US/fbevents.js');
-				fbq('init', '317764454158746');
-				fbq('track', 'PageView');
-				</script>
-				<noscript><img height="1" width="1" style="display:none"
-				src="https://www.facebook.com/tr?id=317764454158746&ev=PageView&noscript=1"
-				/></noscript> --}}
-				<!-- End Meta Pixel Code -->
-				 <link href="{{asset('/frontend/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-		<!-- pignose css -->
-		<link href="{{asset('/frontend/css/pignose.layerslider.css')}}" rel="stylesheet" type="text/css" media="all" />
-		<!-- //pignose css -->
-		<link href="{{asset('/frontend/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
-		<!-- js -->
-		<script type="text/javascript" src="{{asset('frontend/js/jquery-2.1.4.min.js')}}"></script>
-		<!-- //js -->
-		<!-- cart -->
-			<script src="{{asset('frontend/js/simpleCart.min.js')}}"></script>
-		<!-- cart -->
-		<!-- for bootstrap working -->
-			<script type="text/javascript" src="{{asset('frontend/js/bootstrap-3.1.1.min.js')}}"></script>
-			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
-		<!-- //for bootstrap working -->
-		<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
-		<script src="{{asset('frontend/js/jquery.easing.min.js')}}"></script>
-		@livewireStyles
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Movitech</title>
-    <!--/google-fonts -->
-    <link href="//fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
-    <!--//google-fonts -->
-    <!-- Template CSS --> 
-    <link rel="stylesheet" href="/assets/css/style-starter.css"> 
-	</head>
-	<body>
-
-		{{-- <livewire:info></livewire:info> --}}
+    
+        <!--/google-fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+        <!--//google-fonts -->
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="/assets/css/style-starter.css"> 
+        <!-- Template JavaScript -->
+        <script src="/assets/js/jquery-3.3.1.min.js"></script>
+        
+        <!-- //bootstrap -->
+        <script src="/assets/js/bootstrap.min.js"></script>
+        @livewireStyles
+    </head>
+    <body>
 		
 		<livewire:navbar></livewire:navbar>
 	
@@ -124,16 +30,75 @@
 		@yield('contenido')
 	
 	
-		<livewire:footer></livewire:footer>
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-		@livewireScripts
+		<livewire:footer /> 
 
-		<script>
-			window.livewire.on('alert', param => {
-				toastr[param['type']](param['message']);
-			});
-		</script>
-		@include('toastr.alertas')
-	</body>
+        <!-- //footer -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fas fa-arrow-up" aria-hidden="true"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move-top-->
+        <script src="/assets/js/theme-change.js"></script>
+        <!-- MENU-JS -->
+        <script>
+            $(window).on("scroll", function() {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 80) {
+                    $("#site-header").addClass("nav-fixed");
+                } else {
+                    $("#site-header").removeClass("nav-fixed");
+                }
+            });
+
+            //Main navigation Active Class Add Remove
+            $(".navbar-toggler").on("click", function() {
+                $("header").toggleClass("active");
+            });
+            $(document).on("ready", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+                $(window).on("resize", function() {
+                    if ($(window).width() > 991) {
+                        $("header").removeClass("active");
+                    }
+                });
+            });
+
+        </script>
+        <!-- //MENU-JS -->
+
+        <!-- disable body scroll which navbar is in active -->
+        <script>
+            $(function() {
+                $('.navbar-toggler').click(function() {
+                    $('body').toggleClass('noscroll');
+                })
+            });
+
+        </script>
+        <!-- //disable body scroll which navbar is in active -->
+        @livewireScripts
+    </body>
 </html>

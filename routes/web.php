@@ -31,6 +31,10 @@ Route::get('/admin/compras', function () {
     return view('admin.compras.index');
 })->middleware('auth');
 
+Route::get('/admin/noticias', function () {
+    return view('admin.noticias.index');
+})->middleware('auth');
+
 Route::get('admin/categorias', function () {
     return view('admin.categorias.index');
 })->middleware('auth');
@@ -90,7 +94,7 @@ Route::get('/', function () {
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
     SEO::setTitle('► '.$empresa->nombre);
     SEO::setDescription(substr($texto, 0, 300));
-   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+    OpenGraph::addImage('https://movitech.com.py/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('index');
 });
@@ -99,7 +103,7 @@ Route::get('/product/{slug}', function ($slug) {
     $texto = preg_replace ('/<[^>]*>/', ' ', $producto->descripcion);
     SEO::setTitle('► '.$producto->nombre);
     SEO::setDescription(substr($texto, 0, 300));
-    //SEOMeta::setCanonical('https://www.plantascaceres.com/product/'.$producto->slug);
+    SEOMeta::setCanonical('https://movitech.com.py/product/'.$producto->slug);
     SEOTools::opengraph()->addProperty('product:brand', 'Movitech');
     SEOTools::opengraph()->addProperty('product:condition', 'new');
     SEOTools::opengraph()->addProperty('product:availability', 'in stock');
@@ -107,19 +111,20 @@ Route::get('/product/{slug}', function ($slug) {
     SEOTools::opengraph()->addProperty('product:price:amount', $producto->precio);
     SEOTools::opengraph()->addProperty('product:price:currency', 'PYG');
     SEOTools::opengraph()->addProperty('product:retailer_item_id', $producto->slug);
-    //OpenGraph::addImage('https://www.plantascaceres.com/images/productos/'.$producto->foto, ['height' => 300, 'width' => 300]);
+    OpenGraph::addImage('https://movitech.com.py/images/productos/'.$producto->foto, ['height' => 300, 'width' => 300]);
 
     return view('frontend.view',["slug"=>$slug]);
 });
 Route::get('/quienessomos', function () {
     $empresa=Empresa::first();
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
-    //SEO::setTitle('► Quienes Somos');
-    //SEO::setDescription(substr($texto, 0, 300));
-   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+    SEO::setTitle('► Quienes Somos');
+    SEO::setDescription(substr($texto, 0, 300));
+    OpenGraph::addImage('https://movitech.com.py/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('frontend.acerca');
 });
+
 Route::get('/admin/mensajes', function () {
     return view('admin.mensajes.index');
 })->middleware('auth');
@@ -129,7 +134,7 @@ Route::get('/productos', function () {
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
     SEO::setTitle('► Productos');
     SEO::setDescription(substr($texto, 0, 300));
-   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+    OpenGraph::addImage('https://movitech.com.py/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('frontend.productos');
 });
@@ -143,17 +148,19 @@ Route::post('/enviarpedido', [App\Http\Controllers\ComprarController::class, 'en
 Route::get('/perfil', function () {
     return view('frontend.perfil');
 })->middleware('auth');
+
 Route::get('/verproductos', function () {
     $empresa=Empresa::first();
     $texto = preg_replace ('/<[^>]*>/', ' ', $empresa->info);
     SEO::setTitle('► Productos');
     SEO::setDescription(substr($texto, 0, 300));
-   // OpenGraph::addImage('https://www.plantascaceres.com/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
+    OpenGraph::addImage('https://movitech.com.py/images/empresa/'.$empresa->logo, ['height' => 300, 'width' => 300]);
 
     return view('frontend.verproductos');
 });
 
 Route::resource('/admin/servicios', App\Http\Controllers\ServicioController::class)->middleware('auth');
+
 Route::get('/verservicios', function () {
     return view('frontend.verservicios');
 });

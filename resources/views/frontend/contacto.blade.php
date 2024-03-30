@@ -1,140 +1,89 @@
 @extends('layouts.frontend')
 @section('contenido')
-<head>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <section class="w3l-contact-main py-5" id="contact">
+        <div class="container py-lg-5 py-md-3">
+            <div class="w3header-section text-center mb-md-5 mb-4">
+                <h6 class="title-subhny">Info de contacto</h6>
+                <h3 class="title-w3l mb-5">
+                    No dudes, hablemos<br> de tu Proyecto</h3>
 
-</head>
-	<!-- contact -->
-	<div class="contact">
-		<div class="container" style="margin-top: -50px;">
-			<div class="row">
-				<div class="col-md-12"><br><br><br>
-					<h1 style="color:#0c2eec; text-align: center;" class="tittle">Contacto</h1>
-				</div>
-				<div class="col-md-6">
-					<h1 class="tittle" style="color:#2011eb;">Formulario de contacto</h1>
-					<form action="{{ route('enviarcorreo') }}" method="post">
-						@csrf
-						<div class="contact-form2">
-							<input type="text" name="nombre" placeholder="Nombre"  required>
-							<input type="text" name="celular" placeholder="Celular"  required>
-							<textarea type="text" name="mensaje" placeholder="Message..." required></textarea>
-							<button type="submit" class="item_add single-item hvr-outline-out2 button2">Enviar</button>
-						</div>
-					</form>
-				</div>
-				<div class="col-md-6">
-					<h3 class="tittle" style="color:#1434eb;">Ver en el mapa</h3>
-					<!-- map -->
-					<div class="row">
-						<div class="col-12"><hr>
-							<style type="text/css">
-								#mapa{border:0px solid #999;height:250px; border-radius: 10px;}
-							</style>
-							<div id="mapa" class="shadow"></div>
-							<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-							<br><p align="center">Abrir en Google Maps <a href="https://maps.google.com/?q={{$empresa->latitud}},{{$empresa->longitud}}">Ver Instrucciones</a></p>
-						</div>
-					</div>
-					<!-- //map -->
-				</div>
-			</div>
-		</div>
-	</div>
+            </div>
+
+            <div class="w3l-contact-info">
+                <div class="row contact-infos">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-contact-infos">
+                            <div class="icon-box"> <span class="fas fa-map-marked-alt"></span></div>
+                            <div class="text-box">
+                                <h3 class="mb-2">Dirección</h3>
+                                <p>{{$empresa->direccion}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                        <div class="single-contact-infos">
+                            <div class="icon-box"> <span class="fas fa-phone-alt"></span></div>
+                            <div class="text-box">
+                                <h3 class="mb-2">Contacto</h3>
+                                <p><a href="tel:{{$empresa->telefono1}}">{{$empresa->telefono1}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+                        <div class="single-contact-infos">
+                            <div class="icon-box"> <span class="fas fa-envelope-open-text"></span></div>
+                            <div class="text-box">
+                                <h3 class="mb-2">Email</h3>
+                                <p> <a href="mailto:info@movitech.com.py">info@movitech.com.py</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--/contact-map-->
+    <section class="w3l-contact-main" id="contact">
+        <div class="map pt-lg-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14418.42823773819!2d-57.1393716!3d-25.3844826!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945c331596143cc9%3A0xbc4e8d7613b877ee!2sMOVITECH%20PY!5e0!3m2!1ses!2spy!4v1699880342870!5m2!1ses!2spy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <!--//contact-map-->
+    <!--/contact-form-->
+    <section class="w3l-contact-main" id="contact">
+        <div class="contact-infhny py-5">
+            <div class="container py-lg-5">
+                <div class="top-map">
+                    <div class="map-content-9">
+                        <form action="{{ route('enviarcorreo') }}" method="post">
+						    @csrf
+                            <div class="form-top1">
+                                <div class="w3header-section text-center">
+                                    <h6 class="title-subhny">Pongase en contacto </h6>
+                                    <h3 class="title-w3l mb-0">
+                                        Rellena el formulario y envía tu consulta</h3>
+                                </div>
+
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <input type="text" name="nombre" id="w3lName" placeholder="Nombre" required="">
+                                        <input type="number" name="celular" placeholder="Contacto" required="">
+                                    </div>
+                                    <div class="form-top-righ">
+                                        <textarea name="mensaje" id="w3lMessage" placeholder="Mensaje*" required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="text-lg-right text-center">
+                                    <button type="submit" class="btn btn-style btn-primary">Enviar<i class="fas fa-paper-plane ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//contact-form-->
 	
-	<!-- //contact -->
-		
-	<!-- //stats -->
-	<script type="text/javascript" src="{{ asset('frontend/js/maps.js')}}"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHcQT0yBuaLXWdx6Mv_hAroOB0HLmNp5g&callback=Maps" async defer></script>
-	<script> console.log('Hi!'); </script>
-    <!-- Mostrando mapa y calculando distancias y tiempos -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="{{ asset('frontend/js/makermaps.js')}}" charset="utf-8"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHcQT0yBuaLXWdx6Mv_hAroOB0HLmNp5g&callback=Maps" async defer></script>
-    <script>
-        function Maps(){
-            let lat = {{$empresa->latitud}};
-            let lng = {{$empresa->longitud}};
-            let empresa = '{{$empresa->nombre}}';
-            let direccion = '{{$empresa->direccion}}';
-            initMap(lat,lng,empresa,direccion);
-        }        
-    </script>
-	<script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-    </script>
-    <!-- //move-top-->
-    <!-- Template JavaScript -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/theme-change.js"></script>
-    <!--/stats-number-counter-->
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/jquery.countup.js"></script>
-    <script>
-        $('.counter').countUp();
-
-    </script>
-    <!--//stats-number-counter-->
-    <!-- MENU-JS -->
-    <script>
-        $(window).on("scroll", function() {
-            var scroll = $(window).scrollTop();
-
-            if (scroll >= 80) {
-                $("#site-header").addClass("nav-fixed");
-            } else {
-                $("#site-header").removeClass("nav-fixed");
-            }
-        });
-
-        //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function() {
-            $("header").toggleClass("active");
-        });
-        $(document).on("ready", function() {
-            if ($(window).width() > 991) {
-                $("header").removeClass("active");
-            }
-            $(window).on("resize", function() {
-                if ($(window).width() > 991) {
-                    $("header").removeClass("active");
-                }
-            });
-        });
-
-    </script>
-    <!-- //MENU-JS -->
-
-    <!-- disable body scroll which navbar is in active -->
-    <script>
-        $(function() {
-            $('.navbar-toggler').click(function() {
-                $('body').toggleClass('noscroll');
-            })
-        });
-
-    </script>
-    <!-- //disable body scroll which navbar is in active -->
-
-    <!-- //bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
 @stop

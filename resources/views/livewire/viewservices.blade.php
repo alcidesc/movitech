@@ -1,91 +1,55 @@
 <div>
-   <div>
-    <?php
-    function isMobile() {
-        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-    }
-    if (isMobile()) {
-        $divisor = 2;
-    } else {
-        $divisor = 4;
-    }
-    ?>
-    <!-- product-nav -->
-    <script src="{{ asset('frontend/js/easyResponsiveTabs.js') }}" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#horizontalTab').easyResponsiveTabs({
-                type: 'default', // Types: default, vertical, accordion           
-                width: 'auto', // auto or any width like 600px
-                fit: true   // 100% fit in a container
-            });
-        });
-    </script>
-    <div class="new_arrivals">
-        <div class="container">
-            <div class="row">
-                <div id="col-md-12"><br><br><br>
-                    {{-- <h1 style="color:#eb646b;text-align: center;">Nuestros <span>Services</span></h1> --}}
-                    {{-- <p>Aquí encontrarás los mejores servicios al mejor precio.</p><br> --}}
-                </div>
-                <div id="col-md-12">
-                    <input type="search" placeholder="Buscar servicio" class="form-control" wire:model="search"><br>
-                </div>
+    <section class="w3l-team-main team py-5" id="team">
+        <div class="container py-lg-5">
+            <div class="text-center mb-2">
+				<h3 class="title-w3l mb-4"><span class="log">N</span>uestros <span class="log">S</span>ervicios</h3>
+				<div id="col-md-12">
+					<input type="search" placeholder="Buscar servicio" class="form-control" wire:model="search"><br>
+				</div>	
             </div>
-            <div class="row">
-                @php $cont = 1; @endphp
-                @foreach ($services as $value)
-                    <div class="col-xs-6 col-md-3">
-                        <div class="product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="/images/servicios/{{ $value->foto }}" alt="" class="pro-image-front">
-                                    <img src="/images/servicios/{{ $value->foto }}" alt="" class="pro-image-back">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="/service/{{ $value->slug }}" class="link-product-add-cart">Ver servicio</a>
-                                        </div>
-                                    </div>
-                                    @if ($value->oferta)
-                                        <span class="product-new-top" style="background-color: #eb646b !important;">Oferta</span>
-                                    @endif
-                                </div>
-                                <div class="item-info-product">
-                                    <h4><a href="/service/{{ $value->slug }}">{{ $value->nombre }}</a></h4>
-                                    <div class="info-product-price">
-                                        @if ($value->oferta)
-                                            <span class="item_price">{{ number_format($value->oferta, 0, '', '.') }}</span>
-                                            <del>{{ number_format($value->precio, 0, '', '.') }}</del>
-                                        @else
-                                            <span class="item_price">{{ number_format($value->precio, 0, '', '.') }}</span>
-                                        @endif
-                                    </div>
-                                    @if (in_array($value->id, Cart::getContent()->pluck('id')->toArray()))
-                                        <button type="button" class="item_add single-item hvr-outline-out2 button2" wire:click="deletecarrito({{ $value->id }})">
-                                            <i class="fa fa-check-circle-o"></i> Agregado al carrito
-                                        </button>
-                                    @else
-                                        <button type="button" class="item_add single-item hvr-outline-out button2" wire:click="addcarrito({{ $value->id }})">
-                                            <i class="fa fa-shopping-cart"></i> Agregar al carrito
-                                        </button>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @if ($cont % $divisor == 0)
-                        </div><div class="row">
-                    @endif
-                    @php $cont += 1; @endphp
-                @endforeach
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    {{ $services->links() }}
-                </div>
-                <div class="clearfix"></div>
+            <div class="row team-row justify-content-center">
+				@if(count($servicios))
+					@foreach ($servicios as $value)
+						<div class="col-lg-3 col-6 team-wrap mt-lg-5 mt-4">
+							<div class="member">
+								<div class="member-img">
+									<img src="/images/servicios/{{ $value->foto }}" alt="" class="img-fluid radius-image">
+								</div>
+								<div class="member-info">
+									<h4>{{$value->nombre}}</h4>
+									<div class="info-product-price">
+										@if($value->oferta)
+											<span>
+												<del style="color:red;">{{number_format($value->precio, 0, '', '.') }}</del> /
+												{{number_format($value->oferta, 0, '', '.') }}
+											</span>
+										@else
+											<span class="item_price">{{number_format($value->precio, 0, '', '.') }}</span>
+										@endif
+									</div>
+									@if (in_array($value->id, Cart::getContent()->pluck('id')->toArray()))
+										<button type="button" class="btn btn-style2 btn-secondary" wire:click="deletecarrito({{ $value->id }})">
+											<i class="fa fa-check-circle-o"></i> Agregado al carrito
+										</button>
+									@else
+										<button type="button" class="btn btn-style2 btn-primary" wire:click="addcarrito({{ $value->id }})">
+											<i class="fa fa-shopping-cart"></i> Agregar al carrito
+										</button>
+									@endif	
+								</div>
+							</div>
+						</div>
+					@endforeach
+				@else
+					<div class="col-md-12" align="center">
+						<img src="/imgsystem/noencontrado.png" width="30%" /><br>
+						<p class="title-w3l mb-4"><span class="log">S</span>ervicios <span class="log">N</span>o <span class="log">E</span>ncontrados</p>
+					</div>
+				@endif
+				<div class="col-md-12">
+					{{ $servicios->links() }} 
+				</div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 </div>
